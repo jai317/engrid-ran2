@@ -1,2 +1,458 @@
 /* Add your custom theme styles here */
+[data-engrid-theme="ran"]{
+.highlight {
+    background-color: #f9f003;
+    color: #343432;
+    padding: 1rem .5rem .25rem .5rem;
+    font-weight: 500;
+    display: inline-block;
+    text-align:center;
+}
 
+.highlight.big {
+    font-size: 1.5rem;
+}
+
+.monthly-gift-upsell-tooltip .highlight:after {
+    bottom: -12px;
+    left: 55%;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border: 20px solid transparent;
+    border-top-color: #f9f003;
+    margin-left: 30px;
+    z-index: 1;
+}
+
+.en__field--donationAmt .en__field__element--radio .en__field__item label {
+    height:64px;
+}
+
+b, strong {
+    font-family:"HarmoniaSansBlk", sans-serif;
+}
+
+.finelabels label.en__field__label {
+    font-size: calc(0.05552em * 12);
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.68px;
+    text-transform: uppercase;
+    padding-bottom: 0;
+}
+
+.en__field__label[for=en__field_transaction_recurrpay0], .en__field__label[for=en__field_transaction_recurrpay1] {
+    font-family:var(--bold_font-family);
+    font-size: calc(0.05552em * 24);
+    text-transform: none !important;
+    padding-right:3rem;
+}
+
+.en__field__label[for=en__field_transaction_recurrpay0]:focus, .en__field__label[for=en__field_transaction_recurrpay1]:focus {
+    outline:none;
+}
+
+.en__field__input--radio + .en__field__label::before /* , .en__field__input--checkbox + .en__field__label::before, .en__contactDetails__rows::before */ {
+    content: "";
+    position: absolute;
+    height: calc(1.4rem - 2px);
+    width: calc(1.4rem - 2px);
+    left: -2rem;
+    display: inline-block;
+    vertical-align: middle;
+    border: 4px solid #000000;
+    box-shadow: inset 0 0 0 5px #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition-duration: 0.25s;
+    transition-property: border-color, background-color;
+}
+
+.en__field__input--radio:checked + .en__field__label::before /* , .en__field__input--checkbox:checked + .en__field__label::before, .en__contactDetails__select:checked + .en__contactDetails__rows::before */ {
+    background-color: #f1700b;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    border-width: 2px;
+}
+
+.en__field__input--checkbox + .en__field__label, .en__contactDetails__rows {
+    font-size: calc(0.05552em * 18);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.4px;
+    display: inline-block;
+}
+
+.en__field_supporter_country {
+    text-align:right;
+}
+
+.en__field__input--radio, .en__field__input--checkbox, .en__contactDetails__select {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+select, select.en__field__input--select, select.en__field__input--splitselect, select.en__field__input--tripleselect {
+    height:48px;
+}
+
+body:not(#en__pagebuilder)[data-engrid-layout=centercenter1col] .page-backgroundImage {
+    -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
+    clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
+    height: 120vh;
+    background-color: #487c0f;
+}
+
+h1 {text-transform:uppercase;}
+
+.pre-footer-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 260px;
+    justify-content: center;
+}
+
+.pre-footer-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    padding: 0rem 1rem 2rem 1rem;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 30px 0px;
+    flex-wrap: wrap;
+}
+
+.footer-wrapper .footer-menu {
+    padding: 1rem;
+}
+
+.footer-wrapper .footer-copy {
+    padding: 1rem;
+    max-width: 452px;
+}
+
+.footer-wrapper .footer-badges {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-footer {
+    background-color: #000;
+}
+
+
+.content-preFooter {
+    grid-column: pc;
+    background-size: contain;
+    background-color: #ffffff;
+    background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/pre-footer-donation-background.png");
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+  .content-preFooter.pseudo-subgrid > div {
+    grid-column: cc;
+  }
+
+
+
+
+
+ /*
+* ####################################################################################################################
+* Layout - Center ANY
+* ####################################################################################################################
+*/
+
+/*
+* ##########################################################
+* # ENGRID - Mobile First Styling
+* # LAYOUT - Center ANY
+* ##########################################################
+*/
+
+@media screen and (max-width: 360px) {
+    // Remove down arrow when giving frequency wraps
+     .monthly-gift-upsell-tooltip .highlight:after {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    // Remove "Give By Select" icons on small screens
+    
+      .give-by-select
+      .en__field--radio
+      .en__field__item
+      input[type="radio"]
+      + label {
+      background-image: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+     h1 {
+      font-size: calc((0.05552em * 48) * 0.85);
+    }
+     h2,
+     .en__field--donationAmt .en__field__label--item,
+     .en__field--donationAmt .en__field__item--other::before,
+     .en__field--donationAmt .en__field__item--other input,
+     .give-by-select .en__field--radio label,
+     .en__field--recurrpay label.en__field__label,
+     .highlight.big {
+      font-size: calc((0.05552em * 24) * 0.9);
+    }
+    body  h3,
+     .pre-footer-card p,
+     .pre-footer-card.footer-wrapper .footer-menu a {
+      font-size: calc((0.05552em * 16) * 1);
+    }
+     label.en__field__label {
+      font-size: calc((0.05552em * 12) * 0.95);
+    }
+  
+    
+      .en__field__label--item
+      
+      .en__field__input--checkbox
+      + .en__field__label,
+     .en__contactDetails__rows,
+    
+      .give-by-select
+      .en__field--radio
+      .en__field__item
+      input[type="radio"]
+      + label {
+      font-size: calc((0.05552em * 18) * 1);
+    }
+  }
+  
+  @media screen and (max-width: 599px) {
+    body  {
+      font-size: 94%;
+    }
+  
+     .en__field--donationAmt .en__field__element--radio .en__field__item {
+      width: calc(50% - 0.5rem);
+    }
+  }
+  
+   h1 {
+    margin-top: 5px;
+  }
+  
+  .layout-centerleft1col,
+  .layout-centercenter1col,
+  .layout-centercenter1col-wide,
+  .layout-centerright1col {
+    .page-alert,
+    .content-header,
+    .body-banner,
+    .body-bannerOverlay,
+    .body-side,
+    .body-footerOutside,
+    .page-backgroundImageOverlay {
+      // display: none;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      -webkit-clip-path: inset(100%);
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  
+    .body-headerOutside {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      grid-column: bc;
+    }
+  
+    .content-preFooter {
+      grid-column: pc;
+      background-size: contain;
+    }
+  
+    .content-preFooter.pseudo-subgrid > div {
+      grid-column: bc;
+    }
+  
+    .body-footer {
+      margin-bottom: 5rem;
+    }
+  
+    .content-footer.pseudo-subgrid > div {
+      grid-column: bc;
+    }
+  }
+  
+  body:not(#en__pagebuilder) .layout-centerleft1col,
+  body:not(#en__pagebuilder) .layout-centercenter1col,
+  body:not(#en__pagebuilder) .layout-centercenter1col-wide,
+  body:not(#en__pagebuilder) .layout-centerright1col {
+    // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
+    .content-preFooter > div {
+      min-height: 710px;
+    }
+  
+    /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
+    .page-backgroundImage::before {
+      content: "";
+      background-image: radial-gradient(
+        circle at 50% 0,
+        rgba(0, 0, 0, 0.3),
+        transparent 53%
+      );
+      z-index: -3;
+      grid-column: pc;
+    }
+    .page-backgroundImageOverlay {
+      grid-row: page-start / body-main-end;
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0.3)),
+        color-stop(30%, transparent)
+      );
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        transparent 30%
+      );
+    }
+  }
+  
+  body#en__pagebuilder .layout-centerleft1col,
+  body#en__pagebuilder .layout-centercenter1col,
+  body#en__pagebuilder .layout-centercenter1col-wide,
+  body#en__pagebuilder .layout-centerright1col {
+    .page-backgroundImage > div,
+    .page-backgroundImageOverlay > div {
+      grid-column: bc;
+    }
+  }
+  
+  /*
+  * ##########################################################
+  * # ENGRID - BODY Column Breakpoint Styling
+  * # LAYOUT - Center ANY - [class^="layout-center"][class$="1col"]
+  * ##########################################################
+  */
+  
+  /* Sum of all MIN values of the Body Columns */
+  @media screen and (min-width: 600px) {
+    .layout-centerleft1col,
+    .layout-centercenter1col,
+    .layout-centercenter1col-wide,
+    .layout-centerright1col {
+      .en__component--advrow .body-header,
+      .en__component--advrow .body-banner,
+      .en__component--advrow .body-bannerOverlay,
+      .en__component--advrow .body-top,
+      .en__component--advrow .body-side,
+      .en__component--advrow .body-main,
+      .en__component--advrow .body-bottom,
+      .en__component--advrow .body-footer {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+      }
+  
+      .en__component--advrow .body-header {
+        padding-top: 4rem;
+      }
+  
+      .en__component--advrow .body-footer {
+        padding-bottom: 4rem;
+      }
+  
+      .body-headerOutside {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+  
+      [class^="body-"] {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+      }
+  /*
+      .body-header {
+        margin-top: 1rem;
+        border-top: 1px solid black;
+        border-top-left-radius: $client-input-border-radius;
+        border-top-right-radius: $client-input-border-radius;
+      }
+  */
+      .content-preFooter.pseudo-subgrid > div {
+        grid-column: cc;
+      }
+  
+      .content-footer.pseudo-subgrid > div {
+        grid-column: cc;
+      }
+    }
+  }
+  
+  /*
+  * ##########################################################
+  * # ENGRID - Content Column Breakpoint Styling
+  * # LAYOUT - Center ANY - [class^="layout-center"][class$="1col"]
+  * ##########################################################
+  */
+  
+  /* Sum of all MAX values of the Body Columns + 1px */
+  @media screen and (min-width: 1231px) {
+    .layout-centerleft1col,
+    .layout-centercenter1col,
+    .layout-centercenter1col-wide,
+    .layout-centerright1col {
+      .content-preFooter {
+        background-size: cover;
+      }
+    }
+  
+    body:not(#en__pagebuilder) .layout-centerleft1col,
+    body:not(#en__pagebuilder) .layout-centercenter1col,
+    body:not(#en__pagebuilder) .layout-centercenter1col-wide,
+    body:not(#en__pagebuilder) .layout-centerright1col {
+      // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
+      .content-preFooter > div {
+        min-height: 1010px;
+      }
+    }
+  }
+   
+
+
+  
+
+}
