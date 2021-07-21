@@ -2,7 +2,12 @@
 // Uncomment to use and reference engrid-scrips SASS files for more CSS Custom Properties.
 
 // All CSS Custom Properties should be scoped to the theme using CSS Data Attributes.
-[data-engrid-theme="ran"]{
+[data-engrid-theme="ran2"]{
+
+    // PRIMARY COLORS
+    --color_primary: #000000;
+    --color_primary_accent: #f1700b;
+    
     // TYPOGRAPHY DEFAULT
     --default_font-family:"HarmoniaSansStd", sans-serif;
     --bold_font-family:"HarmoniaSansBlk", sans-serif;
@@ -51,6 +56,8 @@
     --input_border-radius: 0;
     // --input_placeholder-color: var(--color_light-gray);
     // --input_box-shadow: inset 0 2px 2px -1px rgba(74, 74, 104, 0.1);
+    --checkbox_content_checked: "";
+    --checkbox_border-width: 2px;
         
     // TYPOGRAPHY INPUT:FOCUS
     // TYPOGRAPHY INPUT:HOVER
@@ -70,27 +77,34 @@
     --button_border-width: 0;
     // --button_border-color: var(--color_black);
     --button_border-radius: 0px;
+    --donation-amount__button_padding: 1.25ch 1.2ch 0.75ch 1.2ch !important;
 
     // TYPOGRAPHY BUTTON:HOVER
     // --button_color_hover: var(--button_color);
     // --button_background-color_hover: var(--color_black);
     // --button_border-color_hover: var(--button_background-color_hover);
-    --button_background-color_checked: #f1700b;
+    --button_background-color_checked: var(--color_primary_accent);
 
     // TYPOGRAPHY BUTTON:SELECTED
     // --button_color_checked: var(--button_color_hover);
-    // --button_background-color_checked: var(--button_background-color_hover);
+    --button_background-color_checked: var(--color_primary_accent);
+    --donation-amount__button_background-color_checked: var(--color_primary_accent);
     // --button_border-color_checked: var(--button_border-color_hover);
 
-    // PRIMARY COLORS
-    --color_primary: #000000;
-    --color_primary_accent: #f1700b;
+  // TYPOGRAPHY SUBMIT BUTTON
+  // @TODO Add Submit Button Background Color and Color
+  // --submit__button_color: var(--button_color);
+  // --submit__button_border-color: var(--button_border-color);
+  --submit__button_backgrond-color: var(--color_primary_accent);
+  // --submit__button_padding-top: 1ch;
+  // --submit__button_padding-bottom: 1ch;
+  --submit__button_font-size: calc(0.05552em * 24);
 
     // DONATION PAGE
     --give-monthly-donation-amount-appended-label: "/mo";
     // --give-annual-donation-amount-appended-label: "/yr";  
     --recurring-frequency__button_count: 3;
     --donation-amount__button_count: 3;
-    --give-by-select__button_count: 3;
+    --give-by-select__button_count: 2;
     --label-font-family: var(--default_font-family);
 }
